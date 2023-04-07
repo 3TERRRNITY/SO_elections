@@ -149,7 +149,7 @@ function App() {
           </div>
           <img
             className="questions__container__image"
-            src="Женя.png"
+            src="./assets/Женя-новая.pngЖеня-новая.png"
             alt="Жильцов Евгений"
           />
         </div>
