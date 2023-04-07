@@ -260,6 +260,10 @@ td {
   font-size: 30px;
   line-height: 36px;
 }
+.questions__container__image {
+  height: 500px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
 
 .footer {
   display: flex;
