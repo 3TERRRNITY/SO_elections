@@ -261,6 +261,7 @@ td {
   line-height: 36px;
 }
 .questions__container__image {
+  border-radius: 20px;
   height: 500px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
