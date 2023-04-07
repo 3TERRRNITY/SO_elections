@@ -8,7 +8,7 @@ function App() {
   return (
     <>
       <div className="header">
-        <img src="Герб.png" alt="Герб" />
+        <img src="../public/assets/Герб.png" alt="Герб" />
         <p className="header__text">
           Первое высшее техническое учебное заведение в России <br />
           САНКТ-ПЕТЕРБУРГСКИЙ ГОРНЫЙ УНИВЕРСИТЕТ <br />
@@ -149,7 +149,7 @@ function App() {
           </div>
           <img
             className="questions__container__image"
-            src="Женя-новая.png"
+            src="../public/assets/Женя-новая.png"
             alt="Жильцов Евгений"
           />
         </div>
