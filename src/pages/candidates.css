@@ -1,0 +1,92 @@
+.header__candidates {
+  width: 100vw;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #17173f;
+}
+.candidates-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.candidates-list__candidate {
+  width: 1200px;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+
+  border: 1px solid rgb(70, 70, 236);
+  border-radius: 20px;
+  padding: 50px 100px;
+  margin: 20px;
+
+  font-size: 20px;
+
+  background-color: rgba(1, 166, 255, 0.1);
+}
+
+.candidate__head {
+  display: flex;
+  flex-direction: column;
+}
+.candidate__head__text {
+  display: flex;
+  flex-direction: column;
+}
+
+.candidate__head__name {
+  padding: 30px 0 10px 0;
+  font-size: 25px;
+  font-weight: 600;
+}
+.candidate__head__desc {
+  color: gray;
+}
+
+.candidate__head > img {
+  width: 300px;
+  height: 300px;
+  border-radius: 20px;
+}
+
+.candidate__experience {
+  margin-left: 100px;
+  height: 100%;
+
+  width: 600px;
+  position: relative;
+}
+
+.candidate__experience > ul > li {
+  list-style-type: none;
+}
+.candidate__experience__program-btn > a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+}
+.candidate__experience__program-btn {
+  position: absolute;
+  bottom: 50px;
+  right: 0;
+  width: 300px;
+  height: 100px;
+
+  border: 0px;
+  border-radius: 20px;
+
+  background-color: rgb(60, 150, 252);
+
+  cursor: pointer;
+}
+
+.candidate__experience__program-btn:hover {
+  background-color: rgb(5, 94, 210);
+  transition: 0.5s;
+}
