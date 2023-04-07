@@ -1,14 +1,13 @@
 import { Link } from "react-router-dom";
 import "./App.css";
-import Telegram from "./assets/icons8-телеграмма-app (2).svg";
-import vk from "./assets/icons8-vk-в-круге.svg";
-import google from "./assets/icons8-google-chrome.svg";
+import Gerb from "./assets/Герб.png";
+import Eugen from "./assets/Женя-новая.png";
 
 function App() {
   return (
     <>
       <div className="header">
-        <img src="../public/assets/Герб.png" alt="Герб" />
+        <img src={Gerb} />
         <p className="header__text">
           Первое высшее техническое учебное заведение в России <br />
           САНКТ-ПЕТЕРБУРГСКИЙ ГОРНЫЙ УНИВЕРСИТЕТ <br />
@@ -149,7 +148,7 @@ function App() {
           </div>
           <img
             className="questions__container__image"
-            src="../public/assets/Женя-новая.png"
+            src={Eugen}
             alt="Жильцов Евгений"
           />
         </div>
