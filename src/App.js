@@ -122,17 +122,29 @@ function App() {
         <p className="documents__title">ДОКУМЕНТЫ</p>
         <div className="documents__btns">
           <button className="documents__btn">
-            <a href="https://drive.google.com/file/d/16C9h-KzsStIeBwq6A0n7zGeJe7lC4Cs-/view">
+            <a
+              href="https://drive.google.com/file/d/16C9h-KzsStIeBwq6A0n7zGeJe7lC4Cs-/view"
+              target="_blank"
+              rel="noreferrer"
+            >
               Положение
             </a>
           </button>
           <button className="documents__btn">
-            <a href="https://drive.google.com/file/d/1n0CXf4vewjlzJrDyZRVIbUTlKN5KwGG-/view">
+            <a
+              href="https://drive.google.com/file/d/1n0CXf4vewjlzJrDyZRVIbUTlKN5KwGG-/view"
+              target="_blank"
+              rel="noreferrer"
+            >
               Регламент
             </a>
           </button>
           <button className="documents__btn">
-            <a href="https://docs.google.com/spreadsheets/d/1fjxbMk6aRRsU_3uQtopYoBezhCWlyWkCQOUQOOKBCQ4/edit#gid=0">
+            <a
+              href="https://docs.google.com/spreadsheets/d/1fjxbMk6aRRsU_3uQtopYoBezhCWlyWkCQOUQOOKBCQ4/edit#gid=0"
+              target="_blank"
+              rel="noreferrer"
+            >
               Протоколы <br />
               выборов
             </a>
