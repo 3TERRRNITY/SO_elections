@@ -122,13 +122,17 @@ function App() {
         <p className="documents__title">ДОКУМЕНТЫ</p>
         <div className="documents__btns">
           <button className="documents__btn">
-            <a href="#">Положение</a>
+            <a href="https://drive.google.com/file/d/16C9h-KzsStIeBwq6A0n7zGeJe7lC4Cs-/view">
+              Положение
+            </a>
           </button>
           <button className="documents__btn">
-            <a href="#">Регламент</a>
+            <a href="https://drive.google.com/file/d/1n0CXf4vewjlzJrDyZRVIbUTlKN5KwGG-/view">
+              Регламент
+            </a>
           </button>
           <button className="documents__btn">
-            <a href="#">
+            <a href="https://docs.google.com/spreadsheets/d/1fjxbMk6aRRsU_3uQtopYoBezhCWlyWkCQOUQOOKBCQ4/edit#gid=0">
               Протоколы <br />
               выборов
             </a>
