@@ -1,10 +1,20 @@
 .header__candidates {
+  padding: 30px;
   width: 100vw;
   height: 600px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   background-color: #17173f;
+}
+.header__candidates_image {
+  max-width: 270px;
+  max-height: 270px;
+  margin-right: auto;
+  margin-bottom: 300px;
+}
+.header__title {
+  text-align: right;
 }
 .candidates-list {
   display: flex;
@@ -62,8 +72,11 @@
   position: relative;
 }
 
+.candidate__experience > ul {
+  list-style-type: square;
+}
 .candidate__experience > ul > li {
-  list-style-type: none;
+  margin-bottom: 10px;
 }
 .candidate__experience__program-btn > a {
   text-decoration: none;
@@ -89,4 +102,77 @@
 .candidate__experience__program-btn:hover {
   background-color: rgb(5, 94, 210);
   transition: 0.5s;
+}
+
+@media only screen and (max-width: 1000px) {
+  .header__candidates {
+    padding: 10px;
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .header__candidates_image {
+    max-width: 150px;
+    max-height: 150px;
+    margin-bottom: 20px;
+  }
+  .header__title {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .candidates-list__candidate {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    padding: 20px;
+    margin: 10px 0;
+  }
+
+  .candidate__head__name {
+    font-size: 20px;
+  }
+  .candidate__experience {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 20px 0;
+    width: 100%;
+  }
+  .candidate__experience__program-btn {
+    margin-bottom: 0;
+    position: inherit;
+    width: 400px;
+    bottom: 0px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .header__candidates {
+    padding: 10px;
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .header__candidates_image {
+    max-width: 150px;
+    max-height: 150px;
+    margin-bottom: 20px;
+  }
+  .header__title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+  .header__link {
+    font-size: 15px;
+  }
+  .candidate__experience__program-btn {
+    width: 250px;
+  }
 }

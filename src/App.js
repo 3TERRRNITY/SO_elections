@@ -2,8 +2,12 @@ import { Link } from "react-router-dom";
 import "./App.css";
 import Gerb from "./assets/Герб.png";
 import Eugen from "./assets/Женя-новая.png";
+import { useEffect } from "react";
 
 function App() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <div className="header">

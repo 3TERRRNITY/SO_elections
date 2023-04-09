@@ -64,3 +64,35 @@
   background-repeat: no-repeat;
   cursor: pointer;
 }
+/* медиа-запросы для адаптивности */
+@media only screen and (max-width: 768px) {
+  .header__title {
+    font-size: 48px;
+    line-height: 58px;
+  }
+
+  .faculties {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+  }
+
+  .faculty > img {
+    height: 200px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .header__title {
+    font-size: 36px;
+    line-height: 44px;
+  }
+
+  .faculties {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+  }
+
+  .faculty > img {
+    height: 150px;
+  }
+}
