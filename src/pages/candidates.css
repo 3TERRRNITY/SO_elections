@@ -108,6 +108,22 @@
   background-color: rgb(35, 85, 150);
   transition: 0.5s;
 }
+.fullscreen {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  font-weight: 800;
+  align-items: center;
+  background-color: rgb(255, 0, 200);
+  font-size: 100px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+}
 .sf {
   background: linear-gradient(
     184.01deg,

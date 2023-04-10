@@ -27,6 +27,25 @@ import pavel from "../assets/Кандидаты/ЭнФ/image 33.png";
 import nikita from "../assets/Кандидаты/ЭФ/Никита фото.png";
 
 function Candidates() {
+  const [showDiv, setShowDiv] = useState(false);
+  const [keySequence, setKeySequence] = useState("");
+
+  useEffect(() => {
+    let sequence = "";
+    const handleKeyDown = (event) => {
+      sequence += event.key.toString();
+      console.log(sequence);
+      if (sequence === "BMO" || sequence === "bmo") {
+        setShowDiv(true);
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, []);
   const [clickCount, setClickCount] = useState(0);
   function handleClick() {
     setClickCount(clickCount + 1);
@@ -307,6 +326,14 @@ function Candidates() {
   const facultyCandidates = candidatesData[facultyId];
   return (
     <>
+      <div>
+        {showDiv && (
+          <div className="fullscreen">
+            <p className="pelmeny">🥟🥟🥟🥟🥟🥟🥟</p>
+            <p>УРА ПОБЕДА!</p>
+          </div>
+        )}
+      </div>
       <div className="header__candidates">
         <Link to={`../Faculties`}>
           <a className="header__link" href="">
