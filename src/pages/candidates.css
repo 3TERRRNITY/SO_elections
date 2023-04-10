@@ -186,6 +186,10 @@
     #2d1c52 75.08%,
     #081422 96.98%
   );
+  color: white;
+}
+.enf > .candidate__head__desc {
+  color: white;
 }
 .ef {
   background: linear-gradient(
@@ -266,7 +270,9 @@
   .header__link {
     font-size: 15px;
   }
-
+  .candidate__experience {
+    padding: 0 20px;
+  }
   .candidate__experience__program-btn {
     width: 250px;
   }
