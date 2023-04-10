@@ -102,6 +102,7 @@
 }
 .isDisabled {
   pointer-events: none;
+  cursor: none;
 }
 .candidate__experience__program-btn:hover {
   background-color: rgb(35, 85, 150);
