@@ -11,6 +11,12 @@ import ENF from "../assets/Эмблемы факультетов/ЭнФ.png";
 import EF from "../assets/Эмблемы факультетов/ЭФ.png";
 import MMF from "../assets/Эмблемы факультетов/ММФ.png";
 import latyshev from "../assets/Кандидаты/СФ/Латышев.png";
+import lizad from "../assets/Кандидаты/СФ/Дьячкова.png";
+import danis from "../assets/Кандидаты/СФ/Муллабаев.png";
+import shcedrov from "../assets/Кандидаты/СФ/Щедров.png";
+import bugay from "../assets/Кандидаты/СФ/Щедров2.png";
+import alexandrova from "../assets/Кандидаты/ММФ/Александрова.png";
+import hvorostyanova from "../assets/Кандидаты/ГРФ/Хворостяная.png";
 
 function Candidates() {
   useEffect(() => {
@@ -21,21 +27,18 @@ function Candidates() {
   const candidatesData = {
     GRF: [
       {
-        name: "Иванов Иван Иванович",
+        name: "Хворостяная Елена",
 
-        image: "../public/фото/Иванов.jpg",
+        image: hvorostyanova,
         desc: 'Студент 3 курса, специальность "Математика и компьютерные науки"',
-        experience:
-          "Принимал участие в олимпиадах по математике, стажировался в Яндексе",
-        program: "https://example.com/program1.pdf",
-      },
-      {
-        name: "Петров Петр Петрович",
-        image: "../public/фото/Петров.jpg",
-        desc: 'Студент 4 курса, специальность "Физика"',
-        experience:
-          "Участник студенческой научной конференции, имеет публикации в научных журналах",
-        program: "https://example.com/program2.pdf",
+        experience: [
+          "Я студентка 3 курса, принимаю активное участие в жизни университета.",
+          "Была организатором многих мероприятий как на факультете, так и в университете.",
+          "Очень люблю свой факультет, болею за него душой и хочу привнести свой вклад в его жизнь!",
+        ],
+
+        program:
+          "https://vk.com/doc203201142_656694817?hash=ypzJ2QmX9CYJbfs1Ex9a3jMprr69cUvGKVjD9psRUis&dl=rhMJMQRQij4l3vuWKCS7uY5VP6z9Ekv2UxPBWSTZxgT",
       },
     ],
     GF: [
@@ -48,47 +51,75 @@ function Candidates() {
         program: "https://example.com/program3.pdf",
       },
     ],
-    NGF: [
-      {
-        name: "Сидорова Анна Игоревна",
-        image: "",
-        desc: 'Студентка 2 курса, специальность "Химия"',
-        experience:
-          "Проходила практику в лаборатории, победительница олимпиады по химии",
-        program: "https://example.com/program3.pdf",
-      },
-    ],
+    NGF: [],
     SF: [
       {
         name: "Латышев Денис",
         image: latyshev,
         desc: "Маркшейдерское дело, ГГ-21-1",
         experience: [
-          "Председатель строительного факультета",
-          "Организатор:",
-          "всех мероприятий на факультете",
-          "Help Mental Health",
-          "ProАктива",
+          "- Председатель строительного факультета",
+          "- Организатор:",
+          "- всех мероприятий на факультете",
+          "- Help Mental Health",
+          "- ProАктива",
         ],
-        program: "https://example.com/program3.pdf",
+        program:
+          "https://vk.com/doc203201142_656692912?hash=CgHkLHzjYLe4bdfXpiV6GEePcVtNCBZe1PnxWRe2dR8&dl=zZzIAJ6MrpqSYMJEQ1QqYTWRZ9ZVkeaHup0ShxHjpc4",
       },
       {
-        name: "Латышев Денис",
-        image: latyshev,
+        name: "Дьячкова Елизавета",
+        image: lizad,
+        desc: "Архитектура, АГС-22-2",
+        experience: [
+          "– Активный человек, наверное, во всем, начиная со спорта, заканчивая общением с людьми.",
+          "– Состою в сборной команде по СБТ, иногда выхожу на волонтерство и донорство.",
+          "– Готова помогать развитию своего любимого факультета.",
+        ],
+        program:
+          "https://vk.com/doc203201142_656691050?hash=tS8DvOl6iaj3VI6GMHJctXLHAQP8iF7ZCH4R40ng3Ms&dl=BuSrbdOVvR1dDv6YPZEvw64ootIpHpXzqRUjhZSeS50",
+      },
+      {
+        name: "Муллабаев Данис",
+        image: danis,
         desc: "Маркшейдерское дело, ГГ-21-1",
-        experience: ` <li>Председатель строительного факультета</li> <li>Организатор: всех мероприятий на факультете</li> <li>Help Mental Health</li> <li>ProАктива</li>`,
-        program: "https://example.com/program3.pdf",
+        experience: [
+          "– Изучаю машинное обучение, увлекаюсь футболом и хоккеем.",
+          "– В школе создал команду КВН и дошли до 1/4 финала Юниор-Лиги Республики Башкортостан.",
+          "– Был организатором Halloween и Нового года в школе и у своих родителей.",
+          "– 2 место в инженерном кейсе MetalCup.",
+        ],
+        program:
+          "https://vk.com/doc203201142_656693346?hash=3JFAYx3f8mqk1cZQMvRrucEzAzYMV26pDtfyUELyqb8&dl=V0F7egDmb7tSy6jgjU9atZKCBr97vzBs5awTswBkKz0",
       },
-    ],
-    FPMS: [
       {
-        name: "Сидорова Анна Игоревна",
-        image: "",
-        desc: 'Студентка 2 курса, специальность "Химия"',
-        experience: ``,
-        program: "https://example.com/program3.pdf",
+        name: "Щедров Михаил",
+        image: shcedrov,
+        desc: "Промышленное и гражданское строительство, ПГС-22",
+        experience: [
+          "– Староста группы ПГС-22, заместитель председателя совета старост факультета.",
+          "– Один из организаторов последнего звонка.",
+          "– Входил в «Совет гимназистов» в школе.",
+          "– Активист, волонтер, вместе с командой победил на КП 2022, участвовал в ША, обучаюсь в Институте Наставничества и в ШО, член команды на неделях факультета.",
+        ],
+        program:
+          "https://vk.com/doc203201142_656693016?hash=z4lgwVKUHiwRcG02XMuTdr4l2ZtmTCBkMcQ7N56HfCo&dl=UlYmAG3pztUiSriLzp44uJG9vtSdLTS396bXDfSQSRX",
+      },
+      {
+        name: "Бугай Артем",
+        image: bugay,
+        desc: "Инженерная геодезия, ИГ-22-2",
+        experience: [
+          "– петербуржец",
+          "– первокурсник",
+          "– вроде умный",
+          "– наверное, смешной",
+        ],
+        program:
+          "https://vk.com/doc203201142_656693293?hash=kQxWAzM1q2zyv3DzVhzulSQ5Hc7rzJkPBewaxWbQFVs&dl=luAYW70hPw7OYtiKFVnJNSuXZlRE2WMZEEJxpNxokss",
       },
     ],
+    FPMS: [],
     FFGD: [
       {
         name: "Сидорова Анна Игоревна",
@@ -99,24 +130,19 @@ function Candidates() {
         program: "https://example.com/program3.pdf",
       },
     ],
-    ENF: [
+    ENF: [],
+    EF: [],
+    MMF: [
       {
-        name: "Сидорова Анна Игоревна",
-        image: "",
-        desc: 'Студентка 2 курса, специальность "Химия"',
-        experience:
-          "Проходила практику в лаборатории, победительница олимпиады по химии",
-        program: "https://example.com/program3.pdf",
-      },
-    ],
-    EF: [
-      {
-        name: "Сидорова Анна Игоревна",
-        image: "",
-        desc: 'Студентка 2 курса, специальность "Химия"',
-        experience:
-          "Проходила практику в лаборатории, победительница олимпиады по химии",
-        program: "https://example.com/program3.pdf",
+        name: "Александрова Елизавета",
+        image: alexandrova,
+        desc: "Машиностроение, ТОА-21",
+        experience: [
+          "- Я активистка своего факультета и организатор мероприятий на факультете и в университете.",
+          "- Люблю общественную деятельность и все, что с ней связано",
+        ],
+        program:
+          "https://vk.com/doc203201142_656693620?hash=KFhzry8sjWQpnz5UGzN8BzA6YZcBjS7CSzUtS1iyauP&dl=o3pENwwzSziJtZrpbEPjHZa97a4qdJJuXGVnKQG951w",
       },
     ],
   };
@@ -192,7 +218,13 @@ function Candidates() {
                   ))}
               </ul>
               <button className="candidate__experience__program-btn">
-                <a href={candidate.program}>Программа</a>
+                <a
+                  href={candidate.program}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Программа
+                </a>
               </button>
             </div>
           </div>
