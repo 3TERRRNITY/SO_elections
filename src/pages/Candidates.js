@@ -17,6 +17,7 @@ import shcedrov from "../assets/Кандидаты/СФ/Щедров.png";
 import bugay from "../assets/Кандидаты/СФ/Щедров2.png";
 import alexandrova from "../assets/Кандидаты/ММФ/Александрова.png";
 import hvorostyanova from "../assets/Кандидаты/ГРФ/Хворостяная.png";
+import yaitskiy from "../assets/Кандидаты/ГРФ/Яицкий.png";
 
 function Candidates() {
   useEffect(() => {
@@ -28,7 +29,6 @@ function Candidates() {
     GRF: [
       {
         name: "Хворостяная Елена",
-
         image: hvorostyanova,
         desc: 'Студент 3 курса, специальность "Математика и компьютерные науки"',
         experience: [
@@ -39,6 +39,16 @@ function Candidates() {
 
         program:
           "https://vk.com/doc203201142_656694817?hash=ypzJ2QmX9CYJbfs1Ex9a3jMprr69cUvGKVjD9psRUis&dl=rhMJMQRQij4l3vuWKCS7uY5VP6z9Ekv2UxPBWSTZxgT",
+        disabled: false,
+      },
+      {
+        name: "Яицкий Евгений",
+        image: yaitskiy,
+        desc: "Геология нефти и газа, ГНГ-20",
+        experience: ["- Действующий председатель факультета"],
+
+        program: "пустота",
+        disabled: true,
       },
     ],
     GF: [
@@ -49,6 +59,7 @@ function Candidates() {
         experience:
           "Проходила практику в лаборатории, победительница олимпиады по химии",
         program: "https://example.com/program3.pdf",
+        disabled: false,
       },
     ],
     NGF: [],
@@ -66,6 +77,7 @@ function Candidates() {
         ],
         program:
           "https://vk.com/doc203201142_656692912?hash=CgHkLHzjYLe4bdfXpiV6GEePcVtNCBZe1PnxWRe2dR8&dl=zZzIAJ6MrpqSYMJEQ1QqYTWRZ9ZVkeaHup0ShxHjpc4",
+        disabled: false,
       },
       {
         name: "Дьячкова Елизавета",
@@ -78,6 +90,7 @@ function Candidates() {
         ],
         program:
           "https://vk.com/doc203201142_656691050?hash=tS8DvOl6iaj3VI6GMHJctXLHAQP8iF7ZCH4R40ng3Ms&dl=BuSrbdOVvR1dDv6YPZEvw64ootIpHpXzqRUjhZSeS50",
+        disabled: false,
       },
       {
         name: "Муллабаев Данис",
@@ -91,6 +104,7 @@ function Candidates() {
         ],
         program:
           "https://vk.com/doc203201142_656693346?hash=3JFAYx3f8mqk1cZQMvRrucEzAzYMV26pDtfyUELyqb8&dl=V0F7egDmb7tSy6jgjU9atZKCBr97vzBs5awTswBkKz0",
+        disabled: false,
       },
       {
         name: "Щедров Михаил",
@@ -104,6 +118,7 @@ function Candidates() {
         ],
         program:
           "https://vk.com/doc203201142_656693016?hash=z4lgwVKUHiwRcG02XMuTdr4l2ZtmTCBkMcQ7N56HfCo&dl=UlYmAG3pztUiSriLzp44uJG9vtSdLTS396bXDfSQSRX",
+        disabled: false,
       },
       {
         name: "Бугай Артем",
@@ -117,17 +132,13 @@ function Candidates() {
         ],
         program:
           "https://vk.com/doc203201142_656693293?hash=kQxWAzM1q2zyv3DzVhzulSQ5Hc7rzJkPBewaxWbQFVs&dl=luAYW70hPw7OYtiKFVnJNSuXZlRE2WMZEEJxpNxokss",
+        disabled: false,
       },
     ],
     FPMS: [],
     FFGD: [
       {
-        name: "Сидорова Анна Игоревна",
-        image: "",
-        desc: 'Студентка 2 курса, специальность "Химия"',
-        experience:
-          "Проходила практику в лаборатории, победительница олимпиады по химии",
-        program: "https://example.com/program3.pdf",
+        disabled: false,
       },
     ],
     ENF: [],
@@ -138,11 +149,11 @@ function Candidates() {
         image: alexandrova,
         desc: "Машиностроение, ТОА-21",
         experience: [
-          "- Я активистка своего факультета и организатор мероприятий на факультете и в университете.",
-          "- Люблю общественную деятельность и все, что с ней связано",
+          "- Я активистка своего факультета и организатор мероприятий на факультете и в университете. Люблю общественную деятельность и все, что с ней связано",
         ],
         program:
           "https://vk.com/doc203201142_656693620?hash=KFhzry8sjWQpnz5UGzN8BzA6YZcBjS7CSzUtS1iyauP&dl=o3pENwwzSziJtZrpbEPjHZa97a4qdJJuXGVnKQG951w",
+        disabled: false,
       },
     ],
   };
@@ -183,6 +194,24 @@ function Candidates() {
       : facultyId == "MMF"
       ? MMF
       : EF;
+  const bgcolor =
+    facultyId == "GRF"
+      ? "grf"
+      : facultyId == "GF"
+      ? "gf"
+      : facultyId == "NGF"
+      ? "ngf"
+      : facultyId == "SF"
+      ? "sf"
+      : facultyId == "FPMS"
+      ? "fpms"
+      : facultyId == "FFGD"
+      ? "ffgd"
+      : facultyId == "ENF"
+      ? "enf"
+      : facultyId == "MMF"
+      ? "mmf"
+      : "ef";
 
   const facultyCandidates = candidatesData[facultyId];
   return (
@@ -197,12 +226,9 @@ function Candidates() {
         <img className="header__candidates_image" src={headerImage} alt="" />
         <p className="header__title">{headerTitle}</p>
       </div>
-      <div className="candidates-list">
+      <div className={`candidates-list ${bgcolor}`}>
         {facultyCandidates.map((candidate) => (
-          <div
-            className="candidates-list__candidate element-animation"
-            key={candidate.id}
-          >
+          <div className="candidates-list__candidate" key={candidate.id}>
             <div className="candidate__head">
               <img src={candidate.image} alt="Фото кандидата" />
               <div className="candidate__head__text">
@@ -217,7 +243,10 @@ function Candidates() {
                     <li key={index}>{exp}</li>
                   ))}
               </ul>
-              <button className="candidate__experience__program-btn">
+              <button
+                className="candidate__experience__program-btn"
+                disabled={candidate.disabled}
+              >
                 <a
                   href={candidate.program}
                   target="_blank"

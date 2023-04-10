@@ -1,10 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Source+Serif+Pro:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=PT+Sans:wght@400;700&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  font-family: "Inter", sans-serif;
+  font-family: "PT Sans", sans-serif;
 }
 a {
   text-decoration: none;
@@ -136,7 +138,7 @@ td {
   margin-top: 20px;
   font-style: normal;
   font-weight: 200;
-  font-size: 15px;
+  font-size: 30px;
   margin-bottom: 920px;
 
   text-align: center;
@@ -156,6 +158,8 @@ td {
 .dates__table__header > th,
 .dates__table__line > td {
   border-radius: 5px;
+  /* добавил */
+  padding: 20px;
 }
 .dates__table__line {
   background: #d9d8e8;
@@ -194,6 +198,9 @@ td {
   border: none;
   cursor: pointer;
 }
+.documents__btn:disabled {
+  background-color: gray;
+}
 
 .documents__btn > a {
   font-family: "Inter";
@@ -216,7 +223,6 @@ td {
   margin: 130px 0;
 }
 .questions__title {
-  font-family: "Inter";
   font-style: normal;
   font-weight: 600;
   font-size: 50px;
@@ -230,14 +236,12 @@ td {
 .questions__container {
   display: flex;
   width: 100%;
+
   align-items: center;
   justify-content: space-around;
 }
 .questions__container__text {
   width: 500px;
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 400;
   font-size: 30px;
   line-height: 36px;
   text-align: center;
