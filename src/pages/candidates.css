@@ -116,7 +116,10 @@
   color: white;
   font-weight: 800;
   align-items: center;
-  background-color: rgb(255, 0, 200);
+  background-image: url("../assets/873335ed926b3065602dc4cbe597df02.jpg");
+  height: 100vh;
+  width: 100vw;
+
   font-size: 100px;
   top: 0;
   left: 0;
