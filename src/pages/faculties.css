@@ -58,8 +58,8 @@
 }
 
 .faculty > img {
-  max-width: 310px;
-  max-height: 310px;
+  max-width: 300px;
+  max-height: 300px;
   background-size: cover;
   background-repeat: no-repeat;
   cursor: pointer;
