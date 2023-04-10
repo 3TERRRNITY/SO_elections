@@ -93,13 +93,14 @@
   border: 0px;
   border-radius: 20px;
 
-  background-color: rgb(60, 150, 252);
+  background: #240c46;
+  box-shadow: 5px 5px 5px rgba(23, 23, 63, 0.25);
 
   cursor: pointer;
 }
 
 .candidate__experience__program-btn:hover {
-  background-color: rgb(5, 94, 210);
+  background-color: rgb(35, 85, 150);
   transition: 0.5s;
 }
 .sf {
