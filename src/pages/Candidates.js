@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import "./candidates.css";
 import GRF from "../assets/Эмблемы факультетов/ГРФ.png";
@@ -27,6 +27,14 @@ import pavel from "../assets/Кандидаты/ЭнФ/image 33.png";
 import nikita from "../assets/Кандидаты/ЭФ/Никита фото.png";
 
 function Candidates() {
+  const [clickCount, setClickCount] = useState(0);
+  function handleClick() {
+    setClickCount(clickCount + 1);
+    if (clickCount >= 10) {
+      alert("СТРОЙКА МОЩЬ ПОХУЙ ПОХУЙ МНЕ!");
+      setClickCount(0);
+    }
+  }
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -306,7 +314,12 @@ function Candidates() {
           </a>
         </Link>
 
-        <img className="header__candidates_image" src={headerImage} alt="" />
+        <img
+          className="header__candidates_image"
+          src={headerImage}
+          alt=""
+          onClick={handleClick}
+        />
         <p className="header__title">{headerTitle}</p>
       </div>
       <div className={`candidates-list ${bgcolor}`}>

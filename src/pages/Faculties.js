@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./faculties.css";
 import { Link } from "react-router-dom";
 import GRF from "../assets/Эмблемы факультетов/ГРФ.png";
@@ -15,6 +15,7 @@ function Faculties() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
   return (
     <>
       <div className="header__faculties">

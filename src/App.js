@@ -2,16 +2,25 @@ import { Link } from "react-router-dom";
 import "./App.css";
 import Gerb from "./assets/Герб.png";
 import Eugen from "./assets/Женя-новая.png";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 function App() {
+  const [clickCount, setClickCount] = useState(0);
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+  function handleClick() {
+    setClickCount(clickCount + 1);
+    if (clickCount >= 10) {
+      alert("Ебать я кто?");
+      setClickCount(0);
+    }
+  }
+
   return (
     <>
       <div className="header">
-        <img src={Gerb} />
+        <img src={Gerb} onClick={handleClick} />
         <p className="header__text">
           Первое высшее техническое учебное заведение в России <br />
           САНКТ-ПЕТЕРБУРГСКИЙ ГОРНЫЙ УНИВЕРСИТЕТ <br />
