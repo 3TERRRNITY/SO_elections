@@ -1,17 +1,18 @@
 .header__candidates {
   padding: 30px;
   width: 100vw;
-  height: 600px;
+  height: 400px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   background-color: #17173f;
+  overflow: hidden;
 }
 .header__candidates_image {
   max-width: 270px;
   max-height: 270px;
   margin-right: auto;
-  margin-bottom: 300px;
+  margin-bottom: 100px;
 }
 .header__title {
   text-align: right;
@@ -43,6 +44,11 @@
   display: flex;
   flex-direction: column;
 }
+.candidate__head__image {
+  align-self: center;
+  max-width: 350px;
+  height: 350px;
+}
 .candidate__head__text {
   display: flex;
   flex-direction: column;
@@ -57,23 +63,14 @@
   color: rgb(0, 0, 0);
 }
 
-.candidate__head > img {
-  width: 300px;
-  height: 300px;
-  border-radius: 20px;
-}
-
 .candidate__experience {
   margin-left: 100px;
   height: 100%;
 
-  width: 600px;
+  width: 400px;
   position: relative;
 }
 
-.candidate__experience > ul {
-  list-style-type: square;
-}
 .candidate__experience > ul > li {
   margin-bottom: 10px;
 }
@@ -98,7 +95,14 @@
 
   cursor: pointer;
 }
-
+.candidate__experience__program-btn:disabled,
+.candidate__experience__program-btn:disabled:hover {
+  background: grey;
+  cursor: none;
+}
+.isDisabled {
+  pointer-events: none;
+}
 .candidate__experience__program-btn:hover {
   background-color: rgb(35, 85, 150);
   transition: 0.5s;
@@ -210,7 +214,6 @@
     align-items: center;
     margin: 0;
     padding: 20px 0;
-    width: 100%;
   }
   .candidate__experience__program-btn {
     margin-bottom: 0;

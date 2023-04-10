@@ -117,6 +117,44 @@ function App() {
             <td className="dates__table__line__wd"></td>
           </tr>
         </table>
+        <table className="dates__table__second">
+          <tr className="dates__table__header">
+            <th>24.04</th>
+            <th>25.04</th>
+            <th>26.04</th>
+            <th>27.04</th>
+            <th>28.04</th>
+            <th>29.04</th>
+            <th>30.04</th>
+          </tr>
+          <tr className="dates__table__line">
+            <td>Студенческий тренинг-центр</td>
+            <td>Нефтегазовый инжиниринг</td>
+            <td>Дебаты в Горном</td>
+            <td>Mining English Speaking Club</td>
+            <td>Академисты</td>
+            <td className="dates__table__line__wd"></td>
+            <td className="dates__table__line__wd"></td>
+          </tr>
+          <tr className="dates__table__line">
+            <td>Творческий клуб</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>Mining Gardening</td>
+            <td className="dates__table__line__wd"></td>
+            <td className="dates__table__line__wd"></td>
+          </tr>
+          <tr className="dates__table__line">
+            <td>Спортивные клубы</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>Настольных игры</td>
+            <td className="dates__table__line__wd"></td>
+            <td className="dates__table__line__wd"></td>
+          </tr>
+        </table>
       </div>
       <div className="documents">
         <p className="documents__title">ДОКУМЕНТЫ</p>

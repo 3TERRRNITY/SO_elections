@@ -66,8 +66,8 @@ function Candidates() {
         experience: [
           "- Один из старичков актива горного факультета и председатель научного направления.",
         ],
-        program: "",
-        disabled: false,
+        program: 0,
+        disabled: true,
       },
     ],
     NGF: [
@@ -78,8 +78,8 @@ function Candidates() {
         experience: [
           "Председатель НГФ 2022 - 2023. За год нам удалось создать команду, которая сегодня задает уровень работы другим общественным объединениям. Коллектив нефтегаза сегодня это передовой механизм с невероятным уровнем эффективности и объединенности. (тьфу-тьфу не сглазит",
         ],
-        program: "",
-        disabled: false,
+        program: 0,
+        disabled: true,
       },
       {
         name: "Алашпаев Милан",
@@ -93,8 +93,8 @@ function Candidates() {
           "прошел отбор на ProАктив",
           "А сейчас хочу заняться чем-то большим и занять эту должность.",
         ],
-        program: "",
-        disabled: false,
+        program: 0,
+        disabled: true,
       },
     ],
     SF: [
@@ -172,29 +172,59 @@ function Candidates() {
     FPMS: [
       {
         name: "Ефимова Милада",
-        image: "",
+        image: efimova,
         desc: "Металлургия цветных металлов, МЦ-21-2",
         experience: [
           "Очень хочу помочь студентам в развитии нашего университета с точки зрения студенческого самоуправления, поэтому я здесь!",
         ],
-        program: "",
+        program:
+          "https://vk.com/doc203201142_656701733?hash=zEIU8xmaLe4yEmZvmlryDWC6qknJ4jWMjfXIMp2gzCP&dl=5GWyamLLYZUDkxY3EksCC40qSx8kaoz32zunNnL0to4",
         disabled: false,
       },
     ],
     FFGD: [
       {
         name: "Калимуллин Степан",
-        image: "",
+        image: stepan,
         desc: "Информатика и вычислительная техника, ИАС-21-2",
         experience: [
           "О себе могу сказать, что я трудолюбив, внимателен, организован, эффективно решаю поставленные задачи. Увлечения у меня чисто женские — люблю рукоделие: вяжу, шью, вышиваю. Выдвигаю свою кандидатуру в связи с грядущим повышением нынешнего шефа.",
         ],
-        program: "",
+        program: 0,
+        disabled: true,
+      },
+    ],
+    ENF: [
+      {
+        name: "Предтеченский Павел",
+        image: pavel,
+        desc: "Металлургия цветных металлов, МЦ-21-2",
+        experience: [
+          "Очень хочу помочь студентам в развитии нашего университета с точки зрения студенческого самоуправления, поэтому я здесь!",
+        ],
+        program: 0,
+        disabled: true,
+      },
+    ],
+    EF: [
+      {
+        name: "Мартынов Никита",
+        image: nikita,
+        desc: "Экономика, ЭГ-22-1",
+        experience: [
+          "Несколько фактов обо мне:",
+          "Староста группы ЭГ-22-1",
+          "Участник актива факультета",
+          "Соорганизатор многих мероприятий факультета",
+          "Могу найти подход к каждому",
+          "Умею организовывать и мотивировать людей к работе",
+          "Полон идей и желания работать на благо родного факультета",
+        ],
+        program:
+          "https://vk.com/doc203201142_656701260?hash=lbJYS1zT4OsQtXJYIngimNBgjJyeEsBf0MMy2uDv0jX&dl=5JiX2L8m34Irp8z7meec7z9twbn5DqUPlRy7SZHxWKc",
         disabled: false,
       },
     ],
-    ENF: [],
-    EF: [],
     MMF: [
       {
         name: "Александрова Елизавета",
@@ -282,7 +312,11 @@ function Candidates() {
         {facultyCandidates.map((candidate) => (
           <div className="candidates-list__candidate" key={candidate.id}>
             <div className="candidate__head">
-              <img src={candidate.image} alt="Фото кандидата" />
+              <img
+                className="candidate__head__image"
+                src={candidate.image}
+                alt="Фото кандидата"
+              />
               <div className="candidate__head__text">
                 <p className="candidate__head__name">{candidate.name}</p>
                 <p className="candidate__head__desc">{candidate.desc}</p>
@@ -297,12 +331,13 @@ function Candidates() {
               </ul>
               <button
                 className="candidate__experience__program-btn"
-                disabled={candidate.disabled}
+                disabled={!candidate.program}
               >
                 <a
-                  href={candidate.program}
+                  href={candidate.program == "нет" ? "" : candidate.program}
                   target="_blank"
                   rel="noopener noreferrer"
+                  className={`${!candidate.program} ? isDisabled : ""`}
                 >
                   Программа
                 </a>
