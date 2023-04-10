@@ -214,7 +214,7 @@
     flex-direction: column;
     align-items: center;
     margin: 0;
-    padding: 20px 0;
+    padding: 20px 10px;
   }
   .candidate__experience__program-btn {
     margin-bottom: 0;
@@ -247,6 +247,7 @@
   .header__link {
     font-size: 15px;
   }
+
   .candidate__experience__program-btn {
     width: 250px;
   }
