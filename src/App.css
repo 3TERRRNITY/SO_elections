@@ -380,7 +380,7 @@ td {
     margin-bottom: 30px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .header {
     padding: 30px;
   }
