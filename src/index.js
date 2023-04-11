@@ -7,6 +7,7 @@ import Faculties from "./pages/Faculties";
 import Candidates from "./pages/Candidates";
 import { Clubs } from "./pages/Clubs";
 import { Obuch } from "./pages/Obuch.js";
+import Loader from "./components/Loader/Loader";
 
 const router = createBrowserRouter([
   {

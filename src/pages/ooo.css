@@ -1,10 +1,10 @@
 .ooo {
   width: 100%;
-  height: 100%;
+  height: 600px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  padding: 20px;
   background: linear-gradient(
     184.31deg,
     #91c3ff 0%,
@@ -28,11 +28,12 @@
 }
 .obuch__text {
   font-size: 40px;
+  color: white;
+  text-align: center;
 }
+.obuch__add,
 .obuch__text__card,
 .obuch__text {
-  color: white;
-
   font-weight: 600;
 }
 .obuch__text__card {
@@ -62,4 +63,9 @@
 .obuch__collect-form:hover {
   background-color: rgb(35, 85, 150);
   transition: 0.5s;
+}
+.obuch__add {
+  text-align: center;
+  font-size: 40px;
+  color: #240c46;
 }

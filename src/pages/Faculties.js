@@ -11,6 +11,8 @@ import FFGD from "../assets/Эмблемы факультетов/ФФиГД.png
 import ENF from "../assets/Эмблемы факультетов/ЭнФ.png";
 import EF from "../assets/Эмблемы факультетов/ЭФ.png";
 import MMF from "../assets/Эмблемы факультетов/ММФ.png";
+import Loader from "../components/Loader/Loader";
+import { Header } from "../components/Header/Header";
 
 function Faculties() {
   const [isLoading, setIsLoading] = useState(false);
@@ -20,7 +22,7 @@ function Faculties() {
 
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 2000);
+    }, 3000);
 
     return () => clearTimeout(timer);
   }, []);
@@ -28,18 +30,10 @@ function Faculties() {
   return (
     <>
       {isLoading ? (
-        <div className="loader">
-          <div className="spinner"></div>
-          <p className="loader__text">Идет загрузка...</p>
-        </div>
+        <Loader />
       ) : (
         <>
-          <div className="header__faculties">
-            <Link className="header__link" to="/">
-              НАЗАД
-            </Link>
-            <p className="header__title">Кандидаты на факультетах</p>
-          </div>
+          <Header text={`Кандидаты на факультетах`} to={"/"} />
           <div className="faculties">
             <Link to="/candidates/GRF">
               <div className="faculty" id="GRF">

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import "./candidates.css";
+import { Header } from "../components/Header/Header";
 import GRF from "../assets/Эмблемы факультетов/ГРФ.png";
 import GF from "../assets/Эмблемы факультетов/ГФ.png";
 import NGF from "../assets/Эмблемы факультетов/НГФ.png";
@@ -25,35 +26,9 @@ import efimova from "../assets/Кандидаты/ФПМС/Ефимова.png";
 import stepan from "../assets/Кандидаты/FFGD/image 35.png";
 import pavel from "../assets/Кандидаты/ЭнФ/image 33.png";
 import nikita from "../assets/Кандидаты/ЭФ/Никита фото.png";
+import { Candidate } from "../components/Candidate/Candidate";
 
 function Candidates() {
-  const [showDiv, setShowDiv] = useState(false);
-  const [keySequence, setKeySequence] = useState("");
-
-  useEffect(() => {
-    let sequence = "";
-    const handleKeyDown = (event) => {
-      sequence += event.key.toString();
-      console.log(sequence);
-      if (sequence === "BMO" || sequence === "bmo") {
-        setShowDiv(true);
-      }
-    };
-
-    window.addEventListener("keydown", handleKeyDown);
-
-    return () => {
-      window.removeEventListener("keydown", handleKeyDown);
-    };
-  }, []);
-  const [clickCount, setClickCount] = useState(0);
-  function handleClick() {
-    setClickCount(clickCount + 1);
-    if (clickCount >= 10) {
-      alert("СТРОЙКА МОЩЬ ПОХУЙ ПОХУЙ МНЕ!");
-      setClickCount(0);
-    }
-  }
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -327,66 +302,18 @@ function Candidates() {
   const facultyCandidates = candidatesData[facultyId];
   return (
     <>
-      <div>
-        {showDiv && (
-          <div className="fullscreen">
-            <p className="pelmeny">🥟🥟🥟🥟🥟🥟🥟</p>
-            <p>УРА ПОБЕДА!</p>
-          </div>
-        )}
-      </div>
-      <div className="header__candidates">
-        <Link to={`../Faculties`}>
-          <a className="header__link" href="">
-            НАЗАД
-          </a>
-        </Link>
-
-        <img
-          className="header__candidates_image"
-          src={headerImage}
-          alt=""
-          onClick={handleClick}
-        />
-        <p className="header__title">{headerTitle}</p>
-      </div>
+      <Header text={headerTitle} to={`../Faculties`}>
+        <img className="header__candidates_image" src={headerImage} alt="" />
+      </Header>
       <div className={`candidates-list ${bgcolor}`}>
         {facultyCandidates.map((candidate) => (
-          <div className="candidates-list__candidate" key={candidate.id}>
-            <div className="candidate__head">
-              <img
-                className="candidate__head__image"
-                src={candidate.image}
-                alt={candidate.name}
-              />
-              <div className="candidate__head__text">
-                <p className="candidate__head__name">{candidate.name}</p>
-                <p className="candidate__head__desc">{candidate.desc}</p>
-              </div>
-            </div>
-            <div className="candidate__experience">
-              <ul>
-                {Array.isArray(candidate.experience) &&
-                  candidate.experience.map((exp, index) => (
-                    <li className="" key={index}>
-                      {exp}
-                    </li>
-                  ))}
-              </ul>
-              <a
-                className={`${
-                  !candidate.program
-                    ? "disabled"
-                    : "candidate__experience__program-a "
-                }`}
-                href={candidate.program == 0 ? "" : candidate.program}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Программа
-              </a>
-            </div>
-          </div>
+          <Candidate
+            name={candidate.name}
+            image={candidate.image}
+            desc={candidate.desc}
+            exp={candidate.experience}
+            program={candidate.program}
+          />
         ))}
       </div>
     </>
