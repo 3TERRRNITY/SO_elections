@@ -5,6 +5,12 @@ import "../App.css";
 import { Link } from "react-router-dom";
 
 export const Obuch = () => {
+  const hrefs = [
+    {
+      name: "Спортивные клубы",
+      href: "https://forms.gle/iU9wY3DBuoQPXJAi8",
+    },
+  ];
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -16,16 +22,21 @@ export const Obuch = () => {
         </Link>
         <p className="header__title">Кандидаты на ООО</p>
       </div>
-      <div className="obuch">
+      <div className="ooo">
         <p className="obuch__text">Сбор заявок еще идет!</p>
-        <a
-          className="obuch__collect-form"
-          href=""
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Успей подать заяку!
-        </a>
+        {hrefs.map((el) => (
+          <div className="obuch">
+            <p className="obuch__text__card">{el.name}</p>
+            <a
+              className="obuch__collect-form"
+              href={el.href}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Успей подать заяку!
+            </a>
+          </div>
+        ))}
       </div>
       <div className="footer">
         <p className="footer__title">НАШИ КОНТАКТЫ</p>
