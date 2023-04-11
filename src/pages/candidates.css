@@ -236,13 +236,15 @@
     margin: 0;
     padding: 20px 10px;
   }
-  .candidate__experience__program-btn {
+  .disabled,
+  .candidate__experience__program-a {
+    margin-top: 20px;
     margin-bottom: 0;
     position: inherit;
     width: 400px;
     bottom: 0px;
   }
-  .candidate__experience__program-btn:disabled {
+  .disabled {
     background-color: gray;
   }
 }
@@ -270,7 +272,8 @@
   .candidate__experience {
     padding: 0 20px;
   }
-  .candidate__experience__program-btn {
+  .disabled,
+  .candidate__experience__program-a {
     width: 250px;
   }
 }
