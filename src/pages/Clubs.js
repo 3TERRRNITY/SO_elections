@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Clubs.css";
 import "./candidates.css";
 import "../App.css";
 import { Link } from "react-router-dom";
 
 export const Clubs = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <div className="header__faculties">

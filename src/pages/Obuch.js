@@ -1,17 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./ooo.css";
 import "./candidates.css";
 import "../App.css";
 import { Link } from "react-router-dom";
 
 export const Obuch = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <div className="header__faculties">
         <Link className="header__link" to="/">
           НАЗАД
         </Link>
-        <p className="header__title">Кандидаты на клубах</p>
+        <p className="header__title">Кандидаты на ООО</p>
       </div>
       <div className="obuch">
         <p className="obuch__text">Сбор заявок еще идет!</p>
