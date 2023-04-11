@@ -159,7 +159,7 @@ function App() {
             <td></td>
             <td></td>
             <td></td>
-            <td>Настольных игры</td>
+            <td>Настольные игры</td>
             <td className="dates__table__line__wd"></td>
             <td className="dates__table__line__wd"></td>
           </tr>

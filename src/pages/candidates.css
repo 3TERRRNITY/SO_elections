@@ -60,7 +60,7 @@
   font-weight: 600;
 }
 .candidate__head__desc {
-  color: rgb(0, 0, 0);
+  color: gray;
 }
 
 .candidate__experience {
@@ -229,6 +229,7 @@
   .candidate__head__name {
     font-size: 20px;
   }
+
   .candidate__experience {
     display: flex;
     flex-direction: column;
