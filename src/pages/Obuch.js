@@ -1,10 +1,10 @@
 import React from "react";
-import "./Clubs.css";
+import "./ooo.css";
 import "./candidates.css";
 import "../App.css";
 import { Link } from "react-router-dom";
 
-export const Clubs = () => {
+export const Obuch = () => {
   return (
     <>
       <div className="header__faculties">
@@ -13,8 +13,16 @@ export const Clubs = () => {
         </Link>
         <p className="header__title">Кандидаты на клубах</p>
       </div>
-      <div className="clubs">
-        <p className="clubs__text">Следите за новостями!</p>
+      <div className="obuch">
+        <p className="obuch__text">Сбор заявок еще идет!</p>
+        <a
+          className="obuch__collect-form"
+          href=""
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Успей подать заяку!
+        </a>
       </div>
       <div className="footer">
         <p className="footer__title">НАШИ КОНТАКТЫ</p>

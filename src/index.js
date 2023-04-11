@@ -5,6 +5,8 @@ import App from "./App";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Faculties from "./pages/Faculties";
 import Candidates from "./pages/Candidates";
+import { Clubs } from "./pages/Clubs";
+import { Obuch } from "./pages/Obuch.js";
 
 const router = createBrowserRouter([
   {
@@ -18,6 +20,14 @@ const router = createBrowserRouter([
   {
     path: "/candidates/:facultyId",
     element: <Candidates />,
+  },
+  {
+    path: "Clubs",
+    element: <Clubs />,
+  },
+  {
+    path: "OOO",
+    element: <Obuch />,
   },
 ]);
 
