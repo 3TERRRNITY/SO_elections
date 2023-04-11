@@ -93,8 +93,9 @@ function Candidates() {
         experience: [
           "Один из старичков актива горного факультета и председатель научного направления.",
         ],
-        program: 0,
-        disabled: true,
+        program:
+          "https://vk.com/doc21793857_657520856?hash=uNSatSfZaLiephz5nnLTpz9TQqhSiRuS261xvmJUdyL&dl=ugHaz0IBJKhnwGZuBe8NizxM4uxRiY11k8H4P7V7PcD",
+        disabled: false,
       },
     ],
     NGF: [
@@ -377,6 +378,7 @@ function Candidates() {
                 disabled={!candidate.program}
               >
                 <a
+                  className="candidate__experience__program-a"
                   href={candidate.program == 0 ? "" : candidate.program}
                   target="_blank"
                   rel="noopener noreferrer"

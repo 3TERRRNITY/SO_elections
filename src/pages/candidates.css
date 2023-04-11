@@ -74,11 +74,13 @@
 .candidate__experience > ul > li {
   margin-bottom: 10px;
 }
-.candidate__experience__program-btn > a {
+.candidate__experience__program-a {
   text-decoration: none;
   color: white;
   font-size: 20px;
   font-weight: 600;
+  width: 100%;
+  height: 100%;
 }
 .candidate__experience__program-btn {
   position: absolute;
