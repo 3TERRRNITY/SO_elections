@@ -373,19 +373,18 @@ function Candidates() {
                     </li>
                   ))}
               </ul>
-              <button
-                className="candidate__experience__program-btn"
-                disabled={!candidate.program}
+              <a
+                className={`${
+                  !candidate.program
+                    ? "disabled"
+                    : "candidate__experience__program-a "
+                }`}
+                href={candidate.program == 0 ? "" : candidate.program}
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <a
-                  className="candidate__experience__program-a"
-                  href={candidate.program == 0 ? "" : candidate.program}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Программа
-                </a>
-              </button>
+                Программа
+              </a>
             </div>
           </div>
         ))}

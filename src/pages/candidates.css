@@ -74,15 +74,8 @@
 .candidate__experience > ul > li {
   margin-bottom: 10px;
 }
+.disabled,
 .candidate__experience__program-a {
-  text-decoration: none;
-  color: white;
-  font-size: 20px;
-  font-weight: 600;
-  width: 100%;
-  height: 100%;
-}
-.candidate__experience__program-btn {
   position: absolute;
   bottom: 50px;
   right: 0;
@@ -94,19 +87,24 @@
 
   background: #240c46;
   box-shadow: 5px 5px 5px rgba(23, 23, 63, 0.25);
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
 }
-.candidate__experience__program-btn:disabled,
-.candidate__experience__program-btn:disabled:hover {
+
+.disabled,
+.disabled:hover {
   background: grey;
   cursor: none;
-}
-.isDisabled {
   pointer-events: none;
-  cursor: none;
 }
-.candidate__experience__program-btn:hover {
+
+.candidate__experience__program-a:hover {
   background-color: rgb(35, 85, 150);
   transition: 0.5s;
 }
