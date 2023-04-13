@@ -26,6 +26,7 @@ import efimova from "../assets/Кандидаты/ФПМС/Ефимова.png";
 import stepan from "../assets/Кандидаты/FFGD/image 35.png";
 import pavel from "../assets/Кандидаты/ЭнФ/image 33.png";
 import nikita from "../assets/Кандидаты/ЭФ/Никита фото.png";
+import kachur from "../assets/Кандидаты/ЭнФ/image 38.png";
 import { Candidate } from "../components/Candidate/Candidate";
 
 function Candidates() {
@@ -97,8 +98,9 @@ function Candidates() {
           "- прошел отбор на ProАктив",
           "А сейчас хочу заняться чем-то большим и занять эту должность.",
         ],
-        program: 0,
-        disabled: true,
+        program:
+          "https://vk.com/doc203201142_656839293?hash=At94fxZRqvAVtRHK9qmJlW8skyz3nLmkV1sUfe9W5WH&dl=AB5nnC1iA7FjPNBFzK5pmjIqz0ejbiS2qy1QUj6Lrac",
+        disabled: false,
       },
     ],
     SF: [
@@ -194,8 +196,9 @@ function Candidates() {
         experience: [
           "О себе могу сказать, что я трудолюбив, внимателен, организован, эффективно решаю поставленные задачи. Увлечения у меня чисто женские — люблю рукоделие: вяжу, шью, вышиваю. Выдвигаю свою кандидатуру в связи с грядущим повышением нынешнего шефа.",
         ],
-        program: 0,
-        disabled: true,
+        program:
+          "https://vk.com/doc203201142_656839287?hash=JcMLYTs7bU3sEVSTDUYp2KDkc5t1225ASukiYyfVtq4&dl=maTwqijyK3zORaU3plZlyzwZZBNW9fa84PPNA5DoqGL",
+        disabled: false,
       },
     ],
     ENF: [
@@ -206,6 +209,14 @@ function Candidates() {
         experience: [
           "Наставник группы ТЭ-22. Организатор, волонтер и участник множества мероприятий на факультете. В данный момент являюсь капитаном факультета на Неделях факультетов и заместителем председателя Энергетического факультета. Имеется опыт присутствия на собраниях Совета факультета, Ученого совета, Совета обучающихся и др.",
         ],
+        program: 0,
+        disabled: true,
+      },
+      {
+        name: "Качур Владислав",
+        image: kachur,
+        desc: "Промышленная электронника, ПЭ-20",
+        experience: [],
         program: 0,
         disabled: true,
       },
