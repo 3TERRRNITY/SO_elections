@@ -82,8 +82,9 @@ function Candidates() {
         experience: [
           "Председатель НГФ 2022 - 2023. За год нам удалось создать команду, которая сегодня задает уровень работы другим общественным объединениям. Коллектив нефтегаза сегодня это передовой механизм с невероятным уровнем эффективности и объединенности. (тьфу-тьфу не сглазить)",
         ],
-        program: 0,
-        disabled: true,
+        program:
+          "https://vk.com/doc203201142_656894130?hash=Wp7iLLyuzNy7Vges0aLEs8f9OS2YLDkNt8ijSpKMWQk&dl=bmOMq2v3uJc8R8gpNx18KLiec2nohf32uSQGLyVWnWH",
+        disabled: false,
       },
       {
         name: "Алашпаев Милан",
@@ -209,8 +210,9 @@ function Candidates() {
         experience: [
           "Наставник группы ТЭ-22. Организатор, волонтер и участник множества мероприятий на факультете. В данный момент являюсь капитаном факультета на Неделях факультетов и заместителем председателя Энергетического факультета. Имеется опыт присутствия на собраниях Совета факультета, Ученого совета, Совета обучающихся и др.",
         ],
-        program: 0,
-        disabled: true,
+        program:
+          "https://vk.com/doc134792419_661278963?hash=wLPRMWlpdiY2Ep73xuXtZobZMkIAPOOVarQqc9VBuw0&dl=0VBoQlrOO69FaWCzGGtcHMehCT5xKNYd3NdyhbldHsL",
+        disabled: false,
       },
       {
         name: "Качур Владислав",
