@@ -27,6 +27,10 @@ const router = createBrowserRouter([
     element: <Clubs />,
   },
   {
+    path: "/candidates/:facultyId",
+    element: <Candidates />,
+  },
+  {
     path: "OOO",
     element: <Obuch />,
   },

@@ -1,10 +1,5 @@
 .clubs {
-  display: flex;
-  justify-content: center;
-  padding: 20px;
-  display: flex;
-  width: 100vw;
-  height: 100vh;
+  overflow: hidden;
   background: linear-gradient(
     184.31deg,
     #91c3ff 0%,
@@ -12,13 +7,74 @@
     rgba(251, 241, 255, 0.46) 100%
   );
 }
-.clubs__text {
-  color: white;
-  font-size: 45px;
-  font-weight: 600;
+.clubs__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  gap: 80px;
+  margin-bottom: 250px;
+}
+.clubs__title {
+  font-weight: 450;
+  font-size: 64px;
+  line-height: 82px;
+  text-align: center;
+  margin-bottom: 50px;
+
+  color: #17173f;
+}
+.club {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 380px;
+  height: 450px;
+}
+.club__image {
+  max-width: 370px;
+  max-height: 370px;
+}
+.club__title {
+  overflow: hidden;
+  margin-top: 40px;
+  font-style: normal;
+  font-weight: 450;
+  font-size: 32px;
+  line-height: 41px;
+  text-align: center;
+  color: #333333;
 }
 @media screen and (max-width: 1000px) {
   .clubs {
     text-align: center;
+  }
+  .clubs__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+    margin-bottom: 150px;
+  }
+  .club {
+    width: 100%;
+    height: auto;
+    margin-bottom: 60px;
+  }
+}
+
+/* Стили для экранов меньше 600 пикселей */
+@media screen and (max-width: 600px) {
+  .clubs__grid {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 40px;
+    margin-bottom: 100px;
+  }
+  .club__image {
+    max-width: 100%;
+    max-height: auto;
+  }
+  .club__title {
+    font-size: 24px;
+    line-height: 32px;
+    margin-top: 20px;
   }
 }
