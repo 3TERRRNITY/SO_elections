@@ -106,7 +106,7 @@ function CandidatesClub() {
         image: Psicholog,
         desc: "Геология нефти и газа, ГНГ-19",
         experience: [
-          "Люблю котиков, когда светит солнышко и четверги. Люблю Соломенных Енотов, смотреть в окно и когда зелёные машины виду из окна. Мопсы смешные",
+          "Люблю котиков, когда светит солнышкои четверги. Люблю Соломенных Енотов, смотреть в окно и когда зелёные машины виду из окна. Мопсы смешные",
         ],
         program: "",
         disabled: true,
@@ -120,8 +120,9 @@ function CandidatesClub() {
         experience: [
           "Не знаете, как во время первой вашей поездки впервые в жизни что-то сломать, чтобы после этого вам провели первую в вашей жизни операцию? Пишите мне, расскажу.",
         ],
-        program: "",
-        disabled: true,
+        program:
+          "https://vk.com/doc327992512_658833615?hash=HnmZ81728WJnKAQ09UaYSukZXpVqtwYtPOepZ44vKr8&dl=jyRsYqQUzoq9rOzBevhTjeVeiL6E320O34oCXzRDgAz",
+        disabled: false,
       },
     ],
     sreda: [
