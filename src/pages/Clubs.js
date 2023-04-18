@@ -63,7 +63,7 @@ export const Clubs = () => {
         <p className="clubs__title">Клубы по интересам</p>
         <div className="clubs__grid">
           {clubsInterests.map((club) => (
-            <Link to={`/candidates/:${club.id}`} id={club.id}>
+            <Link to={`/CandidatesClub/${club.id}`} id={club.id}>
               <div className="club">
                 <img
                   src={club.image}
@@ -82,7 +82,7 @@ export const Clubs = () => {
         <p className="clubs__title">Научные клубы</p>
         <div className="clubs__grid">
           {clubsScience.map((club) => (
-            <Link to={`/candidates/:${club.id}`} id={club.id}>
+            <Link to={`/CandidatesClub/${club.id}`} id={club.id}>
               <div className="club">
                 <img
                   src={club.image}

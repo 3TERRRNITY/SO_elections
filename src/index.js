@@ -8,6 +8,7 @@ import Candidates from "./pages/Candidates";
 import { Clubs } from "./pages/Clubs";
 import { Obuch } from "./pages/Obuch.js";
 import Loader from "./components/Loader/Loader";
+import CandidatesClub from "./pages/CandidatesClub";
 
 const router = createBrowserRouter([
   {
@@ -27,8 +28,8 @@ const router = createBrowserRouter([
     element: <Clubs />,
   },
   {
-    path: "/candidates/:facultyId",
-    element: <Candidates />,
+    path: "/CandidatesClub/:clubId",
+    element: <CandidatesClub />,
   },
   {
     path: "OOO",

@@ -152,6 +152,74 @@
     #cb9ffa 101.76%
   );
 }
+.vneshka {
+  background: linear-gradient(
+    195.9deg,
+    #89b9b9 -3.07%,
+    #6594a4 34.6%,
+    #52869e 77.19%,
+    #35668f 101.76%
+  );
+}
+.archi {
+  background: linear-gradient(
+    195.9deg,
+    rgba(11, 25, 124, 0) -3.07%,
+    #fdcb34 -3.06%,
+    #e4d6c5 51.53%,
+    #0b197c 101.76%
+  );
+}
+.ecolog {
+  background: linear-gradient(
+    195.9deg,
+    #bbdda0 -3.07%,
+    #77bb7d 38.97%,
+    #085148 101.76%
+  );
+}
+.semnadcat {
+  background: linear-gradient(
+    195.9deg,
+    #fdfdfd -3.07%,
+    #dddad1 56.99%,
+    #24242c 101.76%
+  );
+}
+.volonters {
+  background: linear-gradient(
+    195.9deg,
+    #afd6e5 -3.07%,
+    #8ecbe1 56.99%,
+    #103f70 101.76%
+  );
+}
+.psich {
+  background: linear-gradient(
+    195.9deg,
+    #f5f5f5 -3.07%,
+    #b91919 56.99%,
+    #0e0e0e 101.76%
+  );
+}
+.obraz {
+  background: linear-gradient(
+    195.9deg,
+    #f5f5f5 -3.07%,
+    #009fe3 57.53%,
+    #e30613 101.76%
+  );
+}
+.sreda {
+  background: linear-gradient(
+    195.9deg,
+    #f5f5f5 -3.07%,
+    #c8d8f7 32.42%,
+    #b5caf3 54.26%,
+    #0b51d5 101.76%
+  );
+}
+
 @media only screen and (max-width: 1000px) {
   .candidates-list__candidate {
     width: 100%;

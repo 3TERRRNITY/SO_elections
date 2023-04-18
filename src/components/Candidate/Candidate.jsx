@@ -21,7 +21,7 @@ export const Candidate = ({ name, image, desc, exp, program }) => {
         </ul>
         <a
           className={`${
-            !program ? "disabled" : "candidate__experience__program-a "
+            !program ? "disabled" : "candidate__experience__program-a"
           }`}
           href={program == 0 ? "" : program}
           target="_blank"
