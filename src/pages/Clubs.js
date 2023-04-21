@@ -1,15 +1,15 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./Clubs.css";
 import "./candidates.css";
 import "../App.css";
 import { Link } from "react-router-dom";
 import { Header } from "../components/Header/Header";
-import { Footer } from "../components/Footer/Footer";
+import Loader from "../components/Loader/Loader";
 import academ from "../assets/Эмблемы клубы/По интересам/академисты.png";
 import semnadcat from "../assets/Эмблемы клубы/По интересам/17-73.png";
 import vneshka from "../assets/Эмблемы клубы/По интересам/Внешка.png";
 import media from "../assets/Эмблемы клубы/По интересам/BELOE_BEZ_FONA_logo 1.png";
-import sreda from "../assets/Эмблемы клубы/По интересам/Jq9rHFK8I5w 1.png";
+import sreda from "../assets/Эмблемы клубы/По интересам/Творческий клуб.png";
 import english from "../assets/Эмблемы клубы/По интересам/LOGO_BEZ_FONA 1.png";
 import volonters from "../assets/Эмблемы клубы/По интересам/Волонтерский штаб.png";
 import obraz from "../assets/Эмблемы клубы/По интересам/Качеств образования.png";
@@ -21,11 +21,22 @@ import tren from "../assets/Эмблемы клубы/По интересам/Т
 import debats from "../assets/Эмблемы клубы/По интересам/дебаты в горном.png";
 import metrolog from "../assets/Эмблемы клубы/Научные/Метролог.png";
 import geolog from "../assets/Эмблемы клубы/Научные/image 11.png";
-import archi from "../assets/Эмблемы клубы/Научные/image 12.png";
+import archi from "../assets/Эмблемы клубы/Научные/Архитек.png";
 import ecolog from "../assets/Эмблемы клубы/Научные/image 19.png";
 import neft from "../assets/Эмблемы клубы/Научные/Mining the knowledge blue.png";
 
 export const Clubs = () => {
+  const [isLoading, setIsLoading] = useState(false);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    setIsLoading(true);
+
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 3000);
+
+    return () => clearTimeout(timer);
+  }, []);
   const clubsInterests = [
     { id: "academ", title: "Академисты", image: academ },
     { id: "vneshka", title: "Внешние связи", image: vneshka },
@@ -58,48 +69,52 @@ export const Clubs = () => {
   }, []);
   return (
     <>
-      <Header text="Кандидаты на клубы" to={"/"} />
-      <div className="clubs">
-        <p className="clubs__title">Клубы по интересам</p>
-        <div className="clubs__grid">
-          {clubsInterests.map((club) => (
-            <Link to={`/CandidatesClub/${club.id}`} id={club.id}>
-              <div className="club">
-                <img
-                  src={club.image}
-                  alt={club.title}
-                  className="club__image"
-                  id={club.id}
-                />
-                <label for={club.id} className="club__title">
-                  {club.title}
-                </label>
-              </div>
-            </Link>
-          ))}
-        </div>
+      {isLoading ? (
+        <Loader />
+      ) : (
+        <>
+          <Header text="Кандидаты на клубы" to={"/"} />
+          <div className="clubs">
+            <p className="clubs__title">Клубы по интересам</p>
+            <div className="clubs__grid">
+              {clubsInterests.map((club) => (
+                <Link to={`/CandidatesClub/${club.id}`} id={club.id}>
+                  <div className="club">
+                    <img
+                      src={club.image}
+                      alt={club.title}
+                      className="club__image"
+                      id={club.id}
+                    />
+                    <label for={club.id} className="club__title">
+                      {club.title}
+                    </label>
+                  </div>
+                </Link>
+              ))}
+            </div>
 
-        <p className="clubs__title">Научные клубы</p>
-        <div className="clubs__grid">
-          {clubsScience.map((club) => (
-            <Link to={`/CandidatesClub/${club.id}`} id={club.id}>
-              <div className="club">
-                <img
-                  src={club.image}
-                  alt={club.title}
-                  id={club.id}
-                  className="club__image"
-                />
-                <label for={club.id} className="club__title">
-                  {club.title}
-                </label>
-              </div>
-            </Link>
-          ))}
-        </div>
-      </div>
-
-      <Footer />
+            <p className="clubs__title">Научные клубы</p>
+            <div className="clubs__grid">
+              {clubsScience.map((club) => (
+                <Link to={`/CandidatesClub/${club.id}`} id={club.id}>
+                  <div className="club">
+                    <img
+                      src={club.image}
+                      alt={club.title}
+                      id={club.id}
+                      className="club__image"
+                    />
+                    <label for={club.id} className="club__title">
+                      {club.title}
+                    </label>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </>
+      )}
     </>
   );
 };

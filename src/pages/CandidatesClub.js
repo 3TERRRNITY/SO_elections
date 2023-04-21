@@ -15,7 +15,7 @@ import academ from "../assets/Эмблемы клубы/По интересам/
 import semnadcat from "../assets/Эмблемы клубы/По интересам/17-73.png";
 import vneshka from "../assets/Эмблемы клубы/По интересам/Внешка.png";
 import media from "../assets/Эмблемы клубы/По интересам/BELOE_BEZ_FONA_logo 1.png";
-import sreda from "../assets/Эмблемы клубы/По интересам/Jq9rHFK8I5w 1.png";
+import sreda from "../assets/Эмблемы клубы/По интересам/Творческий клуб.png";
 import english from "../assets/Эмблемы клубы/По интересам/LOGO_BEZ_FONA 1.png";
 import volonters from "../assets/Эмблемы клубы/По интересам/Волонтерский штаб.png";
 import obraz from "../assets/Эмблемы клубы/По интересам/Качеств образования.png";
@@ -27,7 +27,7 @@ import tren from "../assets/Эмблемы клубы/По интересам/Т
 import debats from "../assets/Эмблемы клубы/По интересам/дебаты в горном.png";
 import metrolog from "../assets/Эмблемы клубы/Научные/Метролог.png";
 import geolog from "../assets/Эмблемы клубы/Научные/image 11.png";
-import archi from "../assets/Эмблемы клубы/Научные/image 12.png";
+import archi from "../assets/Эмблемы клубы/Научные/Архитек.png";
 import ecolog from "../assets/Эмблемы клубы/Научные/image 19.png";
 import neft from "../assets/Эмблемы клубы/Научные/Mining the knowledge blue.png";
 
