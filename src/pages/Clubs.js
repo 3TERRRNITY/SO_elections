@@ -24,6 +24,7 @@ import geolog from "../assets/Эмблемы клубы/Научные/image 11.
 import archi from "../assets/Эмблемы клубы/Научные/Архитек.png";
 import ecolog from "../assets/Эмблемы клубы/Научные/image 19.png";
 import neft from "../assets/Эмблемы клубы/Научные/Mining the knowledge blue.png";
+import miningeagles from "../assets/Эмблемы клубы/ССК _Горные ястребы_/Горные ястребы.png";
 
 export const Clubs = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -63,6 +64,9 @@ export const Clubs = () => {
     { id: "neft", title: "Нефтегазовый инжиниринг", image: neft },
     { id: "geolog", title: "Геологический инжиринг", image: geolog },
     { id: "arch", title: "Архитектурный клуб 'reseARCH'", image: archi },
+  ];
+  const miningEagles = [
+    { id: "miningEagles", title: "СКК 'Горные Ястребы'", image: miningeagles },
   ];
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -112,6 +116,24 @@ export const Clubs = () => {
                 </Link>
               ))}
             </div>
+          </div>
+          <p className="clubs__title">СКК "Горные Ястребы"</p>
+          <div className="clubs__grid">
+            {miningEagles.map((club) => (
+              <Link to={`/CandidatesClub/${club.id}`} id={club.id}>
+                <div className="club">
+                  <img
+                    src={club.image}
+                    alt={club.title}
+                    id={club.id}
+                    className="club__image"
+                  />
+                  <label for={club.id} className="club__title">
+                    {club.title}
+                  </label>
+                </div>
+              </Link>
+            ))}
           </div>
         </>
       )}

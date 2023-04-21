@@ -219,6 +219,15 @@
     #0b51d5 101.76%
   );
 }
+.miningEagles {
+  background: linear-gradient(
+    195.9deg,
+    #f5f5f5 -3.07%,
+    #c0eff6 32.42%,
+    #a2e0ea 54.23%,
+    #131818 101.76%
+  );
+}
 
 @media only screen and (max-width: 1000px) {
   .candidates-list__candidate {

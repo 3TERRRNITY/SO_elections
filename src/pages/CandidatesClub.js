@@ -30,6 +30,9 @@ import geolog from "../assets/Эмблемы клубы/Научные/image 11.
 import archi from "../assets/Эмблемы клубы/Научные/Архитек.png";
 import ecolog from "../assets/Эмблемы клубы/Научные/image 19.png";
 import neft from "../assets/Эмблемы клубы/Научные/Mining the knowledge blue.png";
+import miningEagles from "../assets/Эмблемы клубы/ССК _Горные ястребы_/Горные ястребы.png";
+import pimenov from "../assets/Кандидаты/ГЯ/Юрпа.png";
+import mirshavka from "../assets/Кандидаты/ГЯ/image 45.png";
 
 function CandidatesClub() {
   useEffect(() => {
@@ -137,6 +140,28 @@ function CandidatesClub() {
         disabled: true,
       },
     ],
+    miningEagles: [
+      {
+        name: "Пименов Юрий",
+        image: pimenov,
+        desc: "Промышленное и гражданское строительство, ПГС-20",
+        experience: [
+          "Больше всего на свете меня привлекает сон и Чикен-Премьер с халапеньо. Не могу жить без путешествий и приключений",
+        ],
+        program: "",
+        disabled: true,
+      },
+      {
+        name: "Миршавка Александра",
+        image: mirshavka,
+        desc: "Нефтегазовое дело, НД-20-1",
+        experience: [
+          `Люблю котиков, греблю и находить приключения. Если же слово "бажен" вам о чём-нибудь говорит, то я с огромным удовольствием хотела бы пообщаться.`,
+        ],
+        program: "",
+        disabled: true,
+      },
+    ],
   };
   const facultyCandidates = candidatesData[clubId];
   const headerTitle =
@@ -176,6 +201,8 @@ function CandidatesClub() {
       ? "Нефтегазовый инжиниринг"
       : clubId == "geolog"
       ? "Геологический инжиринг"
+      : clubId == "miningEagles"
+      ? `СКК "Горные Ястребы"`
       : "Архитектурный клуб 'reseARCH'";
 
   const headerImage =
@@ -215,6 +242,8 @@ function CandidatesClub() {
       ? neft
       : clubId == "geolog"
       ? geolog
+      : clubId == "miningEagles"
+      ? miningEagles
       : archi;
   const bgcolor =
     clubId == "academ"
@@ -253,6 +282,8 @@ function CandidatesClub() {
       ? "neft"
       : clubId == "geolog"
       ? "geolog"
+      : clubId == "miningEagles"
+      ? "miningEagles"
       : "archi";
 
   return (
