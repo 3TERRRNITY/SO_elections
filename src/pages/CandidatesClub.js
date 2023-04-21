@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import React, { useEffect } from "react";
+import { useParams } from "react-router-dom";
 import "./candidates.css";
 import { Header } from "../components/Header/Header";
 import { Candidate } from "../components/Candidate/Candidate";

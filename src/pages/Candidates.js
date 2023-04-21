@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import React, { useEffect } from "react";
+import { useParams } from "react-router-dom";
 import "./candidates.css";
 import { Header } from "../components/Header/Header";
 import GRF from "../assets/Эмблемы факультетов/ГРФ.png";
@@ -28,7 +28,6 @@ import pavel from "../assets/Кандидаты/ЭнФ/image 33.png";
 import nikita from "../assets/Кандидаты/ЭФ/Никита фото.png";
 import kachur from "../assets/Кандидаты/ЭнФ/image 38.png";
 import { Candidate } from "../components/Candidate/Candidate";
-import anna from "../assets/Кандидаты/Внешека/IMG_2960 1.png";
 
 function Candidates() {
   useEffect(() => {
