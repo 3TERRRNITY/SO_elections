@@ -228,7 +228,12 @@
     #131818 101.76%
   );
 }
-
+.academ {
+  background: linear-gradient(195.9deg, #fcb316 -3.07%, #482b01 101.76%);
+}
+.obshaga {
+  background: linear-gradient(195.9deg, #b9b9ff 11.13%, #3c3d5f 101.76%);
+}
 @media only screen and (max-width: 1000px) {
   .candidates-list__candidate {
     width: 100%;

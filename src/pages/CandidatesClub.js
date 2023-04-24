@@ -33,6 +33,10 @@ import neft from "../assets/Эмблемы клубы/Научные/Mining the 
 import miningEagles from "../assets/Эмблемы клубы/ССК _Горные ястребы_/Горные ястребы.png";
 import pimenov from "../assets/Кандидаты/ГЯ/Юрпа.png";
 import mirshavka from "../assets/Кандидаты/ГЯ/image 45.png";
+import julia from "../assets/Кандидаты/Среда/image 47.png";
+import macab from "../assets/Кандидаты/Академисты/image 50.png";
+import crush from "../assets/Кандидаты/Дебаты/image 48.png";
+import mamleev from "../assets/Кандидаты/Общаги/image 49.png";
 
 function CandidatesClub() {
   useEffect(() => {
@@ -136,8 +140,20 @@ function CandidatesClub() {
         experience: [
           "Меня зовут Катя. С самого детства занимаюсь музыкой: в основном пою, играю на фоно и гитаре. Больше всего на свете люблю музыку, ни дня не провожу без нее!)Вдохновляюсь творческими людьми и стараюсь вдохновлять других!",
         ],
-        program: "",
-        disabled: true,
+        program:
+          "https://vk.com/doc208129860_655778593?hash=jdV2KBoVW9JTJEF2ueCEg666pxJAF5jd5XmOtReLjkX&dl=MUozgTD7frbqG1RKojQbdQe4WaKtGjp1DiuIXXDRl50",
+        disabled: false,
+      },
+      {
+        name: "Берестова Юлия",
+        image: julia,
+        desc: "Материаловедение и технологии новых материалов",
+        experience: [
+          `Обожаю музыку, фотографию и животных. Мне нравится (и вроде как получается) организовывать мероприятия, особенно музыкальные!)`,
+        ],
+        program:
+          "https://vk.com/doc184366118_659205116?hash=4SsKY4YTkOkuZcHodtSwxgqPatUkBzm4kqY1dDBm0mg&dl=JhfQR7Ly8rUNZBwfzlqd2HJ6c0K3OkH43zHh21yTUwo",
+        disabled: false,
       },
     ],
     miningEagles: [
@@ -151,15 +167,42 @@ function CandidatesClub() {
         program: "",
         disabled: true,
       },
+    ],
+    academ: [
       {
-        name: "Миршавка Александра",
-        image: mirshavka,
-        desc: "Нефтегазовое дело, НД-20-1",
+        name: "Мацаберидзе Олег",
+        image: macab,
+        desc: "Строительство подземных сооружений, СПС-21-2",
         experience: [
-          `Люблю котиков, греблю и находить приключения. Если же слово "бажен" вам о чём-нибудь говорит, то я с огромным удовольствием хотела бы пообщаться.`,
+          `Занимался внеурочной деятельностью еще со школы. В университете создал новый проект, который за полгода перерос в клуб, целью которого просвещение в сфере культуры и гуманитарных наук.`,
         ],
         program: "",
         disabled: true,
+      },
+    ],
+    debats: [
+      {
+        name: "Крушинов Роман",
+        image: crush,
+        desc: "Системный анализ и управление, САМ-20",
+        experience: [
+          `Занимаюсь дебатами уже 6 лет и имею обширный опыт в координации и управлении студенческим сообществом. Хочу расширить клуб “Дебаты в Горном” и расширить взаимодействие клуба с аналогичными клубами в других вузах.`,
+        ],
+        program: "",
+        disabled: true,
+      },
+    ],
+    obshaga: [
+      {
+        name: "Мамлеев Линар",
+        image: mamleev,
+        desc: "Электропривод и автоматика, ЭРБ-20",
+        experience: [
+          `Председатель общежития №1 с 2021 года. За эти годы я и моя команда смогли «возродить» добрые традиции совета общежитий в общежитии №1 такие как: проводить мероприятия, помогать студентам, администрации общежития и т.д. И теперь мне хочется поделиться опытом со своими коллегами и возглавить студенческий совет общежитий.`,
+        ],
+        program:
+          "https://vk.com/doc107296459_656535469?hash=PqxGA4SFVbxflQTsjPBDieTCFvEaSJCIxFeFrMY3wM4&dl=b7sTjwYtJ1ffjZ1paQOfohzZz6yIrtETPsHLDJYY0Dc",
+        disabled: false,
       },
     ],
   };
@@ -203,7 +246,11 @@ function CandidatesClub() {
       ? "Геологический инжиринг"
       : clubId == "miningEagles"
       ? `СКК "Горные Ястребы"`
-      : "Архитектурный клуб 'reseARCH'";
+      : (clubId = "archi")
+      ? "Архитектурный клуб 'reseARCH'"
+      : (clubId = "obshaga")
+      ? "ООО проживающих общежитий"
+      : "No title";
 
   const headerImage =
     clubId == "academ"
@@ -244,7 +291,9 @@ function CandidatesClub() {
       ? geolog
       : clubId == "miningEagles"
       ? miningEagles
-      : archi;
+      : clubId == "archi"
+      ? archi
+      : "No label";
   const bgcolor =
     clubId == "academ"
       ? "academ"
@@ -284,7 +333,9 @@ function CandidatesClub() {
       ? "geolog"
       : clubId == "miningEagles"
       ? "miningEagles"
-      : "archi";
+      : clubId == "archi"
+      ? "archi"
+      : "obshaga";
 
   return (
     <>
